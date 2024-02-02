@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:src="@drawable/shirts"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Shirt"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="@+id/product_image"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/product_des"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="The Football Is Good For Training And Recreational Purposes"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_name"
+        app:layout_constraintStart_toStartOf="@+id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <TextView
+        android:id="@+id/product_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="13"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_name"
+        app:layout_constraintStart_toStartOf="@+id/product_des"
+        app:layout_constraintTop_toBottomOf="@+id/product_des" />
+
+    <TextView
+        android:id="@+id/product_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_name"
+        app:layout_constraintStart_toStartOf="@+id/product_qty"
+        app:layout_constraintTop_toBottomOf="@+id/product_qty" />
+
+    <RatingBar
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize ="1"
+        android:clickable ="false"
+        android:rating="4"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:progressTint="#008374"
+        app:layout_constraintTop_toBottomOf="@+id/product_color"
+        app:layout_constraintStart_toStartOf="@+id/product_color"/>
+
+    <TextView
+        android:id="@+id/ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="4.4"
+        android:textColor="#008374"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_bar"
+        app:layout_constraintStart_toEndOf="@+id/rating_bar"
+        app:layout_constraintTop_toTopOf="@+id/rating_bar" />
+
+    <TextView
+        android:id="@+id/total_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(2343 ratings)"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/ratings"
+        app:layout_constraintTop_toTopOf="@+id/ratings" />
+
+
+    <TextView
+        android:id="@+id/delivery_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delivery by Tomorrow"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_name"
+        app:layout_constraintStart_toStartOf="@+id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ 272"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="@+id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_time" />
+
+    <TextView
+        android:id="@+id/sale_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sale"
+        android:textSize="11sp"
+        android:textColor="#00832C"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/sale_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ends in 14h:10m:9s"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/sale_txt"
+        app:layout_constraintStart_toEndOf="@+id/sale_txt"
+        app:layout_constraintTop_toTopOf="@+id/sale_txt" />
+
+    <Button
+        android:id="@+id/report_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_24sdp"
+        android:text="@string/report"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="0dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@+id/sale_timer"
+        app:layout_constraintStart_toStartOf="@+id/sale_txt"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_3sdp"
+        android:paddingVertical="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/report_btn">
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_1sdp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/baseline_add_24" />
+
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_1sdp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/minus" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DFDFDF"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/report_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
